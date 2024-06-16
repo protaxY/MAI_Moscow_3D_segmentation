@@ -1,0 +1,16 @@
+# IDE ignore
+.vscode/*
+.idea/*
+
+# files ignore
+*.gltf
+*.json
+*.png
+*.svg
+*.geojson
+
+# folders ignore
+Цифровой прорыв/*
+
+## do not ignore folders
+!imgs/
