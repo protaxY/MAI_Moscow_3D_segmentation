@@ -29,3 +29,13 @@
 
 
 ![Размеченные данные](./imgs/result.png)
+
+## Просмотр результатов и экспорт 3D-сцены (Blender)
+Одним из вариантов просмотра результатов является запуск заранее подготовленного Blender-скрипта
+```bash
+blender viewer.blend --python segmentation_visualizer.py -- blender_viewer_config.json
+```
+
+Итоговую 3D-сцену можно экспортировать в fbx для дальнейшей работы в Unreal Engine.
+
+![Демонстрация сцены во вьюпорте](./imgs/viewport.png)
