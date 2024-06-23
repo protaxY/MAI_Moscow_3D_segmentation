@@ -4,6 +4,7 @@
 
 # files ignore
 *.gltf
+*.json
 *.png
 *.svg
 *.geojson
