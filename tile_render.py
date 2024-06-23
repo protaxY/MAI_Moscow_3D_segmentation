@@ -48,16 +48,16 @@ if 'max_count' in config:
     max_count = config['max_count']
 
 # импортировать и расположить тайлы
-tile_origin = (0, 0, 0)
+tile_origin = None
 tiles = []
 
-for i, file in enumerate(os.listdir(path_to_gltfs)):
+for i, file in enumerate(os.listdir(path_to_gltfs)):   
     if (max_count is not None and i > max_count):
         break
     
     if not file.endswith('.gltf'):
         continue
-    
+
     file_path = Path(file)
     
     bpy.ops.import_scene.gltf(filepath=str(path_to_gltfs / file_path))
@@ -66,7 +66,7 @@ for i, file in enumerate(os.listdir(path_to_gltfs)):
     rtc_centers[file][1] = Decimal(rtc_centers[file][1])
     rtc_centers[file][2] = Decimal(rtc_centers[file][2])
     
-    if i == 0:
+    if tile_origin is None:
         tile_origin = rtc_centers[file]
     
     tile = bpy.data.objects['Mesh_0']

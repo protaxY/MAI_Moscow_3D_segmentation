@@ -4,13 +4,14 @@
 
 # files ignore
 *.gltf
-*.json
 *.png
 *.svg
 *.geojson
+*.blend1
 
 # folders ignore
 Цифровой прорыв/*
+.ipynb_checkpoints
 
 ## do not ignore folders
 !imgs/
