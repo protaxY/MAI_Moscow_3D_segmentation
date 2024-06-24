@@ -15,7 +15,9 @@
 ## Подготовка к запуску
 1. Создать conda-окружение
     ```bash
-    conda create -n hack_env python=3.10.12 --file requirements.txt
+    conda create -n hack_env python=3.10.12 -y
+    conda activate hack_env
+    pip install -r requirements.txt
     ```
 2. Установить blender 4.1 и добавить его в PATH
 
@@ -38,4 +40,4 @@ blender viewer.blend --python segmentation_visualizer.py -- blender_viewer_confi
 
 Итоговую 3D-сцену можно экспортировать в fbx для дальнейшей работы в Unreal Engine.
 
-![Демонстрация сцены во вьюпорте](./imgs/viewport.png)
+![Демонстрация сцены во вьюпорте](./imgs/viewport.jpg)
